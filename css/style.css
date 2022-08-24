@@ -22,6 +22,7 @@ h1{
     font-size: 36px;
     letter-spacing: 0.105em;
     color: var(--purple);
+    text-align: center;
 }
 
 p{
@@ -31,49 +32,59 @@ p{
     line-height: 21px;
     color: var(--text-color);
     align-self: center;
+    gap: 0;
 }
 
 
 .container{
-    display: flex;
-    justify-content: space-evenly;
-    align-items: center;
+    display: grid;
+    width: 100vw;
     height: 100vh;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 1fr;
+}
+
+.top{
+    position: absolute;
+    width: 100vw;
+    top: -3rem;
+}
+
+.bottom{
+    position: absolute;
+    width: 100vw;
+    bottom: -5rem;
 }
 
 .items{
     display: flex;
-    flex-direction: column;
     justify-content: center;
     align-items: center;
-    padding: 20px;
-}
-
-.time{
-    display: flex;
-    justify-content: center;
-    gap: 72px;
+    flex-direction: column;
+    gap: 20px;
     text-align: center;
-    padding: 20px 20px 0;
 }
 
-
-#timer{
-    font-family: 'Poppins';
-    font-style: normal;
-    font-weight: 400;
-    font-size: 72px;
-    line-height: 108px;
-    position: static;
-    padding-left: 10px;
-    padding-right: 10px;
+.rocketimg{
+    display: flex;
+    align-items: center;
 }
 
+.timer{
+    display: grid;
+    grid-template-columns: repeat(4,1fr);
+    grid-row: 1fr;
+    align-items: center;
+    gap: 15px;
+    justify-content: center;
+    text-align: center;
+    width: 50%;
+    padding-right: 20px;
+}
 .subscribe{
     background-color: var(--purple);
     color: var(--light-grey);
     padding: 20px;
-    margin-top: 32px;
     border-radius: 20px;
     border: 0px;
     width: 12rem;
@@ -84,4 +95,11 @@ p{
 
 .subscribe:hover{
     background-color: #6b63ffa6;
+}
+
+.number{
+    font-family: 'Poppins';
+    font-style: normal;
+    font-weight: 700;
+    font-size: 64px;
 }

@@ -1,4 +1,9 @@
-let countdownDate = new Date("September 22, 2023 16:00:00").getTime();
+let timerDays = document.getElementById("timerDays");
+let timerHours = document.getElementById("timerHours");
+let timerMin = document.getElementById("timerMin");
+let timerSec = document.getElementById("timerSec");
+let countdownDate = new Date(Date.now() + 3600 * 1000 * 24 * 12);
+let colon = ":";
 
 var interval = setInterval(function () {
   let now = new Date().getTime();
@@ -9,24 +14,15 @@ var interval = setInterval(function () {
   var minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
   var seconds = Math.floor((distance % (1000 * 60)) / 1000);
 
-  if (1 <= days && days <= 9) {
-    days = "0" + days;
-  }
-  if (1 <= hours && hours <= 9) {
-    hours = "0" + hours;
-  }
-  if (1 <= minutes && minutes <= 9) {
-    minutes = "0" + minutes;
-  }
-  if (1 <= seconds && seconds <= 9) {
-    seconds = "0" + seconds;
-  }
-
-  document.getElementById("timer").innerHTML =
-    days + " : " + hours + " : " + minutes + " : " + seconds;
-
-  if (distance < 0) {
-    clearInterval(x);
-    document.getElementById("timer").innerHTML = "EXPIRED";
-  }
+  timerDays.innerHTML = days;
+  timerHours.innerHTML = addZero(hours) ;
+  timerMin.innerHTML = addZero(minutes);
+  timerSec.innerHTML = addZero(seconds);
 }, 1000);
+
+function addZero(time) {
+  if (time < 10) {
+    time = "0" + time;
+  }
+  return time;
+}
