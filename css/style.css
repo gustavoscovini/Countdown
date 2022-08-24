@@ -38,7 +38,6 @@ p{
 
 .container{
     display: grid;
-    width: 100vw;
     height: 100vh;
     grid-template-columns: 1fr 1fr;
     grid-template-rows: 1fr;
@@ -46,13 +45,13 @@ p{
 
 .top{
     position: absolute;
-    width: 100vw;
+    width: 99vw;
     top: -3rem;
 }
 
 .bottom{
     position: absolute;
-    width: 100vw;
+    width: 99vw;
     bottom: -5rem;
 }
 
