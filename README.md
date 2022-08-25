@@ -1,6 +1,6 @@
 # Countdown-timer
  
-![Screenshot_15](https://user-images.githubusercontent.com/65568675/186276870-4b1417ad-fd62-4959-95bb-633ffb7fe49b.png)
+![Screenshot_21](https://user-images.githubusercontent.com/65568675/186456610-8de42aac-cde9-4989-923f-1d1652f2d6c4.png)
 
 ## Tecnologias utilizadas:
 
